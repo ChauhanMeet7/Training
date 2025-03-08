@@ -1,0 +1,188 @@
+﻿Global Styles
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8; /*Light gray background for better readability*/
+    margin: 0;
+    padding: 10px;
+}
+
+/* Card Container */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 45px;
+}
+
+/* Card Header */
+.card-header {
+    background: linear-gradient(90deg, #5c6bc0, #8e99f3); /* Muted Blue gradient */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px 8px 0 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Card Body */
+.card-body {
+    padding-top: 20px;
+}
+
+/* Form Styling */
+form .form-group {
+    /*margin-bottom: 1px;*/ /* Reduced space between form fields */
+}
+
+/* Input Field Styling */
+input.form-control {
+    padding: 10px 14px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0; /* Light border color */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fafafa; /* Soft off-white background */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    /* Focused Input Field */
+    input.form-control:focus {
+        border-color: #3f51b5; /* Primary blue on focus */
+        box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+        outline: none;
+    }
+
+/* Labels */
+label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2px;
+    display: block;
+    font-size: 14px; /* Slightly smaller label text */
+}
+
+/* Placeholder Styling */
+input::placeholder {
+    color: #888; /* Soft gray for placeholders */
+    font-style: italic;
+}
+
+/* Validation Error Styling */
+.text-danger {
+    color: #f44336; /* Red color for validation errors */
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* Button Styling */
+button.btn-success {
+    background-color: #4caf50; /* Soft green */
+    border-color: #4caf50;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    /* Hover Effect for Submit Button */
+    button.btn-success:hover {
+        background-color: #388e3c; /* Darker green on hover */
+        border-color: #388e3c;
+    }
+
+/* Back Button Styling */
+.btn-dark {
+    background-color: #757575; /* Muted dark gray */
+    border-color: #757575;
+    padding: 12px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    /* Hover Effect for Back Button */
+    .btn-dark:hover {
+        background-color: #616161; /* Slightly darker gray on hover */
+    }
+
+/* Form Row Layout */
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduced gap between fields */
+}
+
+    .form-group .col-md-6 {
+        width: 48%;
+    }
+
+    /* Full-width form fields */
+    .form-group .col-md-12 {
+        width: 100%;
+    }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .form-group .col-md-6 {
+        width: 100%;
+    }
+}
+
+/* Hover Effect for Input Fields */
+input.form-control:hover {
+    border-color: #3f51b5; /* Subtle hover effect */
+}
+
+/* Focus Effect for Input Fields */
+input.form-control:focus {
+    border-color: #3f51b5;
+    background-color: #ffffff;
+    box-shadow: 0 0 6px rgba(63, 81, 181, 0.2);
+}
+
+/* Form Title */
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Section Divider */
+hr {
+    border: 1px solid #333;
+    margin: 12px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .card {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+}

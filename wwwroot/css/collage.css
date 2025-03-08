@@ -1,0 +1,165 @@
+﻿/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: red;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1.page-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
+    color: #4e73df;
+}
+
+/* Card styles */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 1px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.custom-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Button styles */
+.add-student-btn {
+    background-color: #4e73df;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+    .add-student-btn:hover {
+        background-color: #2e59d9;
+    }
+
+/* Search section styles */
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+    .search-input:focus {
+        border-color: #4e73df;
+        outline: none;
+    }
+
+.search-btn {
+    background-color: #4e73df;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+    .search-btn:hover {
+        background-color: #2e59d9;
+    }
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Table Styling */
+.custom-table {
+    width:100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for table */
+}
+
+    .custom-table th, .custom-table td {
+        padding: 12px;
+        text-align: left;
+        font-size: 14px;
+        border-bottom: 3px solid #ddd; /* Light gray border for rows */
+    }
+
+    .custom-table th {
+        background-color: #4e73df; /* Blue header */
+        color: white;
+        text-transform: uppercase;
+        /*        margin-top:2px;*/
+    }
+
+    .custom-table tbody tr:hover {
+        background-color: #f1f1f1; /* Light gray row highlight on hover */
+    }
+
+/* Action Buttons (Edit and Delete) */
+.edit-btn, .delete-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Edit Button */
+.edit-btn {
+    background-color: #f39c12; /* Orange button */
+    color: white;
+}
+
+    .edit-btn:hover {
+        background-color: #e67e22; /* Darker orange on hover */
+    }
+
+/* Delete Button */
+.delete-btn {
+    background-color: #e74c3c; /* Red button */
+    color: white;
+}
+
+    .delete-btn:hover {
+        background-color: #c0392b; /* Darker red on hover */
+    }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .custom-table {
+        width: 100%;
+        font-size: 12px; /* Smaller font on mobile */
+    }
+
+    .edit-btn, .delete-btn {
+        font-size: 12px;
+        padding: 6px 10px; /* Adjust button size for mobile */
+    }
+}
