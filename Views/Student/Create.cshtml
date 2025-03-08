@@ -1,0 +1,188 @@
+﻿@model WebApplication1.Models.AddViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+<head>
+    <link href="~/css/add.css" rel="stylesheet" media="all" />
+</head>
+
+<hr />
+<h1 class="text-center">Add Student</h1>
+
+<hr />
+<div class="card">
+    <div class="card-header bg-blue-400"><h5><i class='fa fa-check-circle-o'></i> Add new student here</h5></div>
+    <div class="card-body">
+        <div class=" row g-6">
+            <div class="col-md-15">
+                <form asp-action="Add" method="post" class="row g-12">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="StudentId" class="control-label"></label>
+                        <input required asp-for="StudentId" class="form-control" placeholder="Enrollment Number" />
+                        <span asp-validation-for="StudentId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Course" class="control-label"></label>
+                        <input required asp-for="Course" class="form-control" placeholder="BE/DIPLOMA/MBA/OTHER" />
+                        <span asp-validation-for="Course" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Branch" class="control-label"></label>
+                        <input required asp-for="Branch" class="form-control" placeholder="Enter Branch" />
+                        <span asp-validation-for="Branch" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Semester" class="control-label"></label>
+                        <input required asp-for="Semester" class="form-control" placeholder="Current Sem" />
+                        <span asp-validation-for="Semester" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label asp-for="VT_Sr_No" class="control-label"></label>
+                        <input required asp-for="VT_Sr_No" class="form-control" placeholder="GNFC VT_SR_NO" />
+                        <span asp-validation-for="VT_Sr_No" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Training_Period" class="control-label"></label>
+                        <input required asp-for="Training_Period" class="form-control" placeholder="Total Duration" />
+                        <span asp-validation-for="Training_Period" class="text-danger"></span>
+                    </div>
+                    <hr />
+                    <h4>Personal Details:</h4>
+                    <hr />
+                    <div class="form-group col-md-6">
+                        <label asp-for="FirstName" class="control-label"></label>
+                        <input required asp-for="FirstName" class="form-control" placeholder="Enter Firstname" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="LastName" class="control-label"></label>
+                        <input required asp-for="LastName" class="form-control" placeholder="Enter LastName" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="MiddleName" class="control-label"></label>
+                        <input required asp-for="MiddleName" class="form-control" placeholder=" Enter MiddleName" />
+                        <span asp-validation-for="MiddleName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="College" class="control-label"></label>
+                        <input required asp-for="College" class="form-control" placeholder=" Enter Collage" />
+                        <span asp-validation-for="College" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="EnrollmentNumber" class="control-label"></label>
+                        <input required asp-for="EnrollmentNumber" class="form-control" placeholder=" Enter EnrollmentNumber" />
+                        <span asp-validation-for="EnrollmentNumber" class="text-danger"></span>
+                    </div>
+                    @* <div class="form-group col-md-6"> *@
+                    @*     <label asp-for="Department" class="control-label "></label> *@
+                    @*     <input required asp-for="Department" class="form-control" placeholder=" Enter Department" /> *@
+                    @*     <span asp-validation-for="Department" class="text-danger"></span> *@
+                    @* </div> *@
+                    <div class="form-group">
+                        <label asp-for="DepartmentId" class="control-label">Department</label>
+                        <select asp-for="DepartmentId" class="form-control" asp-items="ViewBag.Departments">
+                            <option value="">-- Select Department --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label asp-for="AddressCollege" class="control-label"></label>
+                        <input required asp-for="AddressCollege" class="form-control" placeholder=" Enter AddressCollage" />
+                        <span asp-validation-for="AddressCollege" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Birth_Date" class="control-label"></label>
+                        <input required type="date" asp-for="Birth_Date" class="form-control" placeholder=" Enter DOB" />
+                        <span asp-validation-for="Birth_Date" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Blood_group" class="control-label"></label>
+                        <input required asp-for="Blood_group" class="form-control" placeholder=" Enter BloodGroup" />
+                        <span asp-validation-for="Blood_group" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label asp-for="Permanent_Address" class="control-label"></label>
+                        <input required asp-for="Permanent_Address" class="form-control" placeholder=" Enter Parmanent Address " />
+                        <span asp-validation-for="Permanent_Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="PhoneNumber" class="control-label"></label>
+                        <input required maxlength="10" type="text" asp-for="PhoneNumber" class="form-control" placeholder=" Enter PhoneNumber" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="ParentsContact" class="control-label"></label>
+                        <input required maxlength="10" type="text" asp-for="ParentsContact" class="form-control" placeholder=" Enter Parents Contact" />
+                        <span asp-validation-for="ParentsContact" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="FatherName" class="control-label"></label>
+                        <input required asp-for="FatherName" class="form-control" placeholder=" Enter FatherName" />
+                        <span asp-validation-for="FatherName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="MotherName" class="control-label"></label>
+                        <input required asp-for="MotherName" class="form-control" placeholder=" Enter MotherName" />
+                        <span asp-validation-for="MotherName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Married" class="control-label"></label>
+                        <input required asp-for="Married" class="form-control" placeholder=" Yes. OR No." />
+                        <span asp-validation-for="Married" class="text-danger"></span>
+                    </div>
+                    <hr />
+                    <h4>Tranning Details:</h4>
+                    <hr />
+                    <div class="form-group col-md-6">
+                        <label asp-for="StartDate" class="control-label"></label>
+                        <input required type="date" asp-for="StartDate" class="form-control" placeholder=" Enter StartDate" />
+                        <span asp-validation-for="StartDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="EndDate" class="control-label"></label>
+                        <input required type="date" asp-for="EndDate" class="form-control" placeholder=" Enter EndDate" />
+                        <span asp-validation-for="EndDate" class="text-danger"></span>
+                    </div>
+                    <hr />
+                    <h4>Academic Details:</h4>
+                    <hr />
+                    <div class="form-group col-md-6">
+                        <label asp-for="Examination" class="control-label"></label>
+                        <input required asp-for="Examination" class="form-control" placeholder=" Enter Examination" />
+                        <span asp-validation-for="Examination" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label asp-for="Board" class="control-label"></label>
+                        <input required asp-for="Board" class="form-control" placeholder=" Enter Board" />
+                        <span asp-validation-for="Board" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="PassingYear" class="control-label"></label>
+                        <input required asp-for="PassingYear" class="form-control" placeholder="Passing Year" />
+                        <span asp-validation-for="PassingYear" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Percentage" class="control-label"></label>
+                        <input required asp-for="Percentage" class="form-control" placeholder="Percentage" />
+                        <span asp-validation-for="Percentage" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" value="submit" class="btn btn-success mt-2">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div>
+            <a asp-action="List" class="btn btn-dark mt-2"><i class="fa fa-plus-circle"> Back to List</i></a>
+        </div>
+    </div>
+</div>
+
+@* @section Scripts { *@
+@*     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} *@
+@* } *@
+

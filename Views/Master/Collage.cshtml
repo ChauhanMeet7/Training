@@ -1,0 +1,64 @@
+﻿@model List<WebApplication1.Models.Student>
+
+<head>
+    <link href="~/css/collage.css" rel="stylesheet" media="all" />
+</head>
+
+<body>
+    <h1 class="page-title">Student List</h1>
+
+    <div class="card custom-card">
+        <div class="card-header custom-card-header">
+            
+            <div class="search-container">
+                <form class="search-form" asp-action="Collage" method="GET">
+                    <input name="searchString" class="search-input" type="search" placeholder="Search" />
+                    <button class="search-btn" type="submit">Search</button>
+                    <button class="search-btn m-3" asp-action="Collage" type="submit">Back to List</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-responsive">
+        <table class="custom-table" id="tbl-list">
+            <thead>
+                <tr>
+                    <th>StudentId</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>College</th>
+                    <th>Action</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td>@student.StudentId</td>
+                        <td>@student.FirstName</td>
+                        <td>@student.LastName</td>
+                        <td>@student.College</td>
+                       
+                        <td>
+                            
+                            <a asp-action="Edit" asp-controller="Student" asp-route-id="@student.Id" class="btn edit-btn "><i class="fa fa-plus-circle"> Edit</i></a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
